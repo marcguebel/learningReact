@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TikTakToe from './TikTakToe';
 import Menu from './Menu';
+import 'tailwindcss/tailwind.css';
 
 export default function App() {
 	const [display, setDisplay] = useState(null);
@@ -21,7 +22,7 @@ export default function App() {
 	}
 
 	return (
-		<div>
+		<div className='m-5'>
 			{displayToRender}
 		</div>
 	)

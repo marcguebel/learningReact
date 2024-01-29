@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Back from './Back';
 
 function Square({value, onSquareClick}) {
     return (
@@ -20,8 +21,7 @@ export default function TikTakToe({onSelect}) {
     return (
         <div className="game">
             <div className="game-board">
-                <button onClick={() => onSelect('Menu')}>Back</button>
-
+                <Back onSelect={onSelect} />
                 <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
             </div>
         </div>
