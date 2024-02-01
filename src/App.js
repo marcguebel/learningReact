@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TikTakToe from './TikTakToe';
+import Calculator from './Calculator';
 import Menu from './Menu';
 import 'tailwindcss/tailwind.css';
 
@@ -15,6 +16,9 @@ export default function App() {
 	switch(display) {
 		case 'TikTakToe':
 			displayToRender = <TikTakToe onSelect={setNewDisplay} />;
+			break;
+		case 'Calculator':
+			displayToRender = <Calculator onSelect={setNewDisplay} />;
 			break;
 		default:
 			displayToRender = <Menu onSelect={setNewDisplay} />;
